@@ -1,0 +1,44 @@
+{% extends "::base.html.twig"%} 
+
+{% block stylesheets %}
+    {% stylesheets
+        '@ProxiwebPersonaBundle/Resources/public/css/persona-buttons.css'
+    %}
+<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+{% endstylesheets %}
+  <style>
+    /* ========================================================
+     *    Demo styles
+     * ===================================================== */
+    .wrap{
+      margin: 100px auto;
+      text-align: center;
+      width: 600px;
+    }
+    .wrap a{
+      margin-bottom: 40px;
+    }
+  </style>
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://login.persona.org/include.js"></script>
+{% javascripts 
+                  'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'
+                  '@ProxiwebPersonaBundle/Resources/public/js/persona_auth.js'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% endblock %}
+
+{% block body %}
+<div class="wrap">
+  {% if app.security.isGranted('IS_AUTHENTICATED_FULLY') %}
+  <p>Hello {{app.security.getToken().getUser().getEmail()}}</p><p><a id="signout" class="persona-button dark" href="#"><span>Logout</span></a></p>
+  {% else %}
+  <a id="signin" href="#" class="persona-button"><span>Sign in with your Email</span></a>
+  <!--<a id="signin" href="#" class="persona-button dark"><span>Sign in with your Email</span></a> -->
+  <!--<a id="signin" href="#" class="persona-button orange"><span>Sign in with your Email</span></a>  -->  
+  {% endif %}  
+</div>
+{% endblock %}

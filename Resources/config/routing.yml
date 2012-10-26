@@ -1,0 +1,10 @@
+
+#if you don't use anotation for routes definition
+
+# persona_login:
+#     pattern: /persona/login
+#     defaults: {_controller: ProxiwebPersonaBundle:Persona:login }
+# 
+# persona_logout:
+#     pattern: /persona/logout
+#     defaults: {_controller: ProxiwebPersonaBundle:Persona:logout }
