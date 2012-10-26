@@ -1,0 +1,27 @@
+{
+    "name": "proxiweb/persona-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 Mozilla's Persona security extension",
+    "keywords": ["Security", "Persona", "Authentication"],
+    "homepage": "https://github.com/Proxiweb/PersonaBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Régis Guyomarch",
+            "email": "regisg@proxiweb.fr"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/symfony": ">=2.1,<2.3-dev",
+        "friendsofsymfony/user-bundle": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "Proxiweb\\Bundle\\PersonaBundle": "" }
+    },
+    "suggest": {
+        "propel/propel-bundle": "If you want to use Propel ORM for FOSUserBundle",
+    },
+    "target-dir": "Proxiweb/Bundle/PersonaBundle",
+    "minimum-stability": "dev"
+}
