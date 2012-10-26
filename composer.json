@@ -20,7 +20,7 @@
         "psr-0": { "Proxiweb\\Bundle\\PersonaBundle": "" }
     },
     "suggest": {
-        "propel/propel-bundle": "If you want to use Propel ORM for FOSUserBundle",
+        "propel/propel-bundle": "If you want to use Propel ORM for FOSUserBundle"
     },
     "target-dir": "Proxiweb/Bundle/PersonaBundle",
     "minimum-stability": "dev"
