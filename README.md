@@ -33,6 +33,7 @@ Composer will install the bundle to your project's `vendor/proxiweb` directory.
 2. Login By Email
 3. Authentication urls configuration
 4. Add Persona's assets
+5. Demo page
 
 ###2.Login by Email
 Persona authenticates users with their email, so you must configure FOSUserBundle to enable login with email :
@@ -83,5 +84,6 @@ Add the script to the pages which performs authentication and pages you wants Pe
 ```
 After this script, include the script `persona_auth.js` provided with this bundle. You can use the stylesheet `persona-buttons.css` to style login and logout button.
 
+###5.Demo page
 PersonaBundle provides a demo page at /persona/demo. It uses assetic, so if you wants load this page, you have to add PersonaBundle to Assetic's bundles parameter.
-
+Create a user foo@bar.org with FOSUserBundle, signin with your mail, validate your email if this is the fiorst time you use Persona, enjoy.
