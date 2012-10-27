@@ -40,7 +40,7 @@ class PersonaListener implements ListenerInterface
 	  curl_setopt($ch, CURLOPT_POST, 1);
 	  curl_setopt($ch, CURLOPT_POSTFIELDS, $datas);
 	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
 
           $res = json_decode(curl_exec($ch),true);
           curl_close($ch);
