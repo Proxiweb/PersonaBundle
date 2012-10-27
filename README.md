@@ -86,4 +86,4 @@ After this script, include the script `persona_auth.js` provided with this bundl
 
 ###5.Demo page
 PersonaBundle provides a demo page at /persona/demo. It uses assetic, so if you wants load this page, you have to add PersonaBundle to Assetic's bundles parameter.
-Create a user foo@bar.org with FOSUserBundle, signin with your mail, validate your email if this is the fiorst time you use Persona, enjoy.
+Create a user foo@bar.org with FOSUserBundle, signin with your mail, validate your email if this is the first time you use Persona, enjoy.
