@@ -19,7 +19,7 @@ class PersonaListener implements ListenerInterface
     {
         $this->securityContext = $securityContext;
         $this->authenticationManager = $authenticationManager;
-        $this->checkurl = 'https://browserid.org/verify';
+        $this->checkurl = 'https://verifier.login.persona.org/verify';
     }
 
     public function setCheckUrl($checkurl)
@@ -41,6 +41,7 @@ class PersonaListener implements ListenerInterface
 	  curl_setopt($ch, CURLOPT_POSTFIELDS, $datas);
 	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+	  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
 
           $res = json_decode(curl_exec($ch),true);
           curl_close($ch);
