@@ -18,6 +18,10 @@ Add PersonaBundle in your composer.json:
     }
 }
 ```
+Add PersonaBundle in AppKernel.php
+```php
+  ... new Proxiweb\Bundle\PersonaBundle\ProxiwebPersonaBundle(),
+```
 
 Now tell composer to download the bundle by running the command:
 
